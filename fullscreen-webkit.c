@@ -5,7 +5,7 @@
  * This example code can be found here:
  * https://live.gnome.org/WebKitGtk/ProgrammingGuide/Tutorial
  * The only modification is adding:
- * gtk_window_fullscreen();
+ * gtk_window_fullscreen();, and using argv[1] as the url
  */
 
 /*
@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
     gtk_container_add(GTK_CONTAINER(main_window), scrolledWindow);
 
     // Load a web page into the browser instance
-    webkit_web_view_load_uri(webView, "http://127.0.0.1/");
+    webkit_web_view_load_uri(webView, argv[1]);
 
     // Make sure that when the browser area becomes visible, it will get mouse
     // and keyboard events
