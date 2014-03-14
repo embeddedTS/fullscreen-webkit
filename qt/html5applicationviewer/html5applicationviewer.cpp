@@ -1083,6 +1083,8 @@ Html5ApplicationViewerPrivate::Html5ApplicationViewerPrivate(QWidget *parent)
     m_webView = new QGraphicsWebView;
     m_webView->setAcceptTouchEvents(true);
     m_webView->setAcceptHoverEvents(false);
+    m_webView->page()->mainFrame()->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAlwaysOff);
+    m_webView->page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAlwaysOff);
     setAttribute(Qt::WA_AcceptTouchEvents, true);
     scene->addItem(m_webView);
     scene->setActiveWindow(m_webView);
